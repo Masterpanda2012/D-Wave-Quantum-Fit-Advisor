@@ -1,0 +1,38 @@
+[
+  {
+    "problem_class": "tsp",
+    "title": "D-Wave — Solving a TSP with Leap",
+    "url": "https://docs.dwavequantum.com/en/latest/examples/tsp.html",
+    "kind": "example"
+  },
+  {
+    "problem_class": "scheduling",
+    "title": "Ocean SDK — Constrained scheduling",
+    "url": "https://docs.dwavequantum.com/en/latest/ocean/sdk_intro/scheduling.html",
+    "kind": "doc"
+  },
+  {
+    "problem_class": "portfolio",
+    "title": "Portfolio optimization on a quantum computer",
+    "url": "https://docs.dwavequantum.com/en/latest/examples/portfolio.html",
+    "kind": "example"
+  },
+  {
+    "problem_class": "feature_selection",
+    "title": "Binary quadratic models (BQM) overview",
+    "url": "https://docs.dwavequantum.com/en/latest/concepts/bqm.html",
+    "kind": "doc"
+  },
+  {
+    "problem_class": "general_optimization",
+    "title": "Leap hybrid solvers",
+    "url": "https://docs.dwavequantum.com/en/latest/leap/hybrid_solvers.html",
+    "kind": "doc"
+  },
+  {
+    "problem_class": "*",
+    "title": "Ocean SDK installation",
+    "url": "https://docs.dwavequantum.com/en/latest/ocean/start/install.html",
+    "kind": "getting_started"
+  }
+]

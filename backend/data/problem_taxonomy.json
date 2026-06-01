@@ -1,0 +1,53 @@
+{
+  "problem_classes": [
+    {
+      "id": "tsp",
+      "label": "Traveling salesperson / routing",
+      "aliases": ["routing", "vehicle routing", "vrp", "delivery routes"],
+      "qubo_friendly": true,
+      "typical_vars": "50–5000"
+    },
+    {
+      "id": "scheduling",
+      "label": "Job / shift scheduling",
+      "aliases": ["shift", "roster", "timetable", "crew assignment"],
+      "qubo_friendly": true,
+      "typical_vars": "100–10000"
+    },
+    {
+      "id": "portfolio",
+      "label": "Portfolio / asset selection",
+      "aliases": ["investment", "allocation", "knapsack selection"],
+      "qubo_friendly": true,
+      "typical_vars": "20–500"
+    },
+    {
+      "id": "feature_selection",
+      "label": "Feature / subset selection (ML prep)",
+      "aliases": ["feature selection", "subset selection", "binary encoding"],
+      "qubo_friendly": true,
+      "typical_vars": "50–2000"
+    },
+    {
+      "id": "simulation",
+      "label": "Physics / chemistry simulation",
+      "aliases": ["molecular", "materials", "hamiltonian"],
+      "qubo_friendly": false,
+      "typical_vars": "N/A (gate model)"
+    },
+    {
+      "id": "ml_training",
+      "label": "Large-scale ML training",
+      "aliases": ["deep learning", "gradient descent", "neural network training"],
+      "qubo_friendly": false,
+      "typical_vars": "millions+"
+    },
+    {
+      "id": "general_optimization",
+      "label": "General constrained optimization",
+      "aliases": ["linear program", "mixed integer", "nonlinear"],
+      "qubo_friendly": "depends",
+      "typical_vars": "varies"
+    }
+  ]
+}
