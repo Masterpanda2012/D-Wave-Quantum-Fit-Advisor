@@ -1,51 +1,83 @@
-# Outreach email — D-Wave Systems
+# Outreach email — D-Wave Systems (deliverability-safe)
 
-**Subject:** Open-source prototype — “should I use quantum?” intake, fit scoring, and conservative recommendations
+Use the **plain-text body** below in Gmail/Outlook (paste as plain text, not from a rich doc). Do not attach files on the first message. Send to **one named person** when possible, not a bulk alias.
 
 ---
 
-Hi D-Wave team,
+## Before you send (reduces spam folder risk)
 
-I’m writing to share a small open-source prototype I built in the spirit of how you talk about **lowering the adoption barrier** for quantum optimization — and to spell out the gap it tries to fill for teams who think about **problem qualification, solver selection, and classical baselines** as one loop rather than three disconnected conversations.
+1. **Recipient** — Prefer a real contact (DevRel, solutions engineer, hiring manager) from LinkedIn or the company site. Avoid `info@`, `hello@`, `contact@`, and long CC lists on the first send.
+2. **From address** — Send from your normal mailbox (e.g. school or personal Gmail you already use for real mail). Do not use a brand-new address for cold outreach.
+3. **Authentication** — If you use a custom domain, confirm SPF, DKIM, and DMARC are set in DNS (Google Workspace / Cloudflare docs). Gmail accounts already have this handled.
+4. **Format** — Plain text only for v1. No HTML newsletter layout, no images, no tracking links, no URL shorteners (bit.ly, etc.).
+5. **Links** — **One link** in the body (GitHub repo). Put run instructions in the README, not in the email.
+6. **Subject** — Short, specific, no ALL CAPS, no exclamation marks, no “FREE” / “URGENT” / “ACT NOW”.
+7. **Volume** — One company, one person, one email. Wait for a reply before wide follow-ups.
+8. **Optional** — Send Tuesday–Thursday morning in the recipient’s time zone. Add 2–3 prior emails in the same thread only if you already talked to that person.
 
-## What it is
+---
 
-**Quantum Fit Advisor** (working name) is a **FastAPI** backend plus a **React** wizard UI. The README positions it as a decision companion for engineers who are not quantum specialists: describe an optimization problem in domain terms, and get a **conservative** recommendation — **classical**, **hybrid**, or **quantum** — with plain-English rationale instead of hype.
+## Subject line (pick one)
 
-The app includes:
+Best default:
 
-- A **four-step intake wizard** (problem type, scale, constraints, review) mapped to combinatorial classes you already teach in Ocean examples — routing, scheduling, portfolio, feature selection, and more.
-- A **transparent 5-axis fit model** (problem size, QUBO structure, sample tolerance, hardware fit, exactness needs) so the recommendation is inspectable, not a black box.
-- A **rules-first recommendation engine** with **conservative bias** — under ~50 unstructured variables it defaults to classical; when exact optimality is required it routes to hybrid, not quantum-only.
-- **Worked QUBO/BQM sketches** per problem class so the output is actionable for someone starting in Ocean.
-- **Curated D-Wave doc links** (Leap hybrid, BQM concepts, TSP/portfolio examples) matched to the detected class.
-- A lightweight **lead-qualification tier** (`low` / `medium` / `high`) for funnel experiments — useful if you want to see which intakes would have been worth a solutions conversation.
+    Question on quantum adoption tooling (student project)
 
-## The gap it tries to fill
+Alternatives:
 
-Public quantum content often answers *how* to run a sampler, but the question that blocks adoption is *whether* quantum is the right tool for this problem at this scale. Sales and solutions teams still spend time on problems that were always classical wins. This prototype is a **self-serve first pass**: qualify the problem, explain the tradeoffs, and point to the right next step — classical baseline, hybrid Leap workflow, or a structured quantum POC — without pretending to replace your solutions architects or Ocean docs.
+    Student-built prototype: when to use quantum vs classical
+    Feedback request: problem qualification wizard (open source)
 
-## How to run it
+Avoid:
 
-```bash
-# API (port 8001)
-cd backend && python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-uvicorn app.main:app --reload --host 127.0.0.1 --port 8001
+    Open-source prototype — “should I use quantum?” …   (quotes + em dash can hurt on some filters)
+    AMAZING opportunity / internship / partnership
 
-# UI (port 5174)
-cd frontend && npm install && npm run dev
-# → http://127.0.0.1:5174
-```
+---
 
-Try a routing problem at ~250–500 variables with sparse constraints — you should see hybrid or quantum with explicit conservative notes. Try ML training or &lt;50 variables — you should see classical with clear reasoning.
+## Plain-text body (copy from here)
 
-## Repo
+Hi [First name],
 
-https://github.com/Masterpanda2012/D-Wave-Quantum-Fit-Advisor
+I built a small open-source side project inspired by D-Wave’s adoption story: helping engineers decide whether an optimization problem is worth classical solvers, hybrid Leap workflows, or a quantum POC—without needing a PhD first.
 
-I’m a student builder exploring how adoption tooling can complement Ocean and Leap, not compete with them. If this is useful, I’d welcome feedback on whether the scoring axes match how your solutions team actually qualifies opportunities — or if you’d point me to someone on the developer-relations or product side who cares about self-serve qualification flows.
+It is called Quantum Fit Advisor: a FastAPI backend and React wizard. You describe the problem (routing, scheduling, portfolio, etc.), and it returns a conservative recommendation (classical, hybrid, or quantum) with a short rationale, five transparent fit scores, a QUBO/BQM sketch, and links to relevant Ocean docs. It defaults to classical when scale or structure does not justify quantum, on purpose.
 
-Thanks for your time,
+I am not pitching a product or asking for a job in this note—only whether the framing matches how your team actually qualifies opportunities. If it is off base, a one-line redirect would be enough.
+
+Repo (README has run steps): https://github.com/Masterpanda2012/D-Wave-Quantum-Fit-Advisor
+
+Thank you for your time,
 
 Nikhil Avin
+[Your school or program, optional one line]
+[City, optional]
+
+---
+
+## What we removed vs the rich draft (and why)
+
+| Removed from email | Why |
+|--------------------|-----|
+| Markdown bold/headers | Many clients send HTML; heavy formatting looks like marketing mail |
+| Code blocks / localhost URLs | Filters flag shell snippets and non-public hosts |
+| Multiple doc links | Link-heavy messages score higher as promotional |
+| “Lead qualification” / “sales funnel” | B2B spam lexicon |
+| Long bullet lists | Fine on GitHub README; in email, keep under ~150 words if possible |
+
+The README on GitHub can stay detailed; the email should be a short human intro plus one link.
+
+---
+
+## If it still lands in spam
+
+- Ask a friend to send a test to you and check headers (Gmail: Show original → SPF/DKIM pass).
+- Reply from your regular contacts first that day so the mailbox has normal activity.
+- If using school Outlook, send from web client once (not a broken SMTP app).
+- Follow up once after 5–7 business days with a shorter note in the **same thread**, still plain text, no new links.
+
+---
+
+## Rich reference draft (do not send as-is)
+
+Keep the long markdown version for your own notes only, or turn it into a GitHub Discussion / README section—not the first email.
