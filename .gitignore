@@ -17,3 +17,6 @@ frontend/dist/
 .idea/
 .vscode/
 *.log
+
+# Local only (not published)
+OUTREACH_EMAIL.md

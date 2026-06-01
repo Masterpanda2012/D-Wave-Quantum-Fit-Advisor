@@ -124,10 +124,6 @@ frontend/
 | Resources | Static curated list in `backend/data/dwave_resources.json` |
 | LLM | Not required; entire path is rules-based for reproducible demos |
 
-## Outreach
-
-A short, spam-safe email template lives in [`OUTREACH_EMAIL.md`](OUTREACH_EMAIL.md). Point recipients to this README for run steps and feature detail.
-
 ## Not affiliated
 
 Student/portfolio prototype inspired by D-Wave’s adoption narrative. **Not** an official D-Wave product or endorsement.
